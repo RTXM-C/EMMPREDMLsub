@@ -11,7 +11,6 @@ import model13
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-# BiLSTM
 def deep_predict(model, X_test):
     scaler = StandardScaler()
     X_test_scaled = scaler.fit_transform(X_test.reshape(-1, 640)).reshape(-1, 72, 640)
@@ -33,7 +32,6 @@ def deep_predict(model, X_test):
     return all_preds
 
 
-# ExtraTrees\XGBoost
 def xg_et_predict(model_list, X_test):
     y_test_pro = []
     for i in range(9):
@@ -47,7 +45,6 @@ def xg_et_predict(model_list, X_test):
 def main_predict(feature):
     path_root = "./model"
 
-    # 加载 model13
     params = {
         'hidden_size': 256,
         'num_layers': 1,
