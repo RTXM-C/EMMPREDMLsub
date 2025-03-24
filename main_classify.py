@@ -32,7 +32,7 @@ def esm_feature_small(sequences):
         with torch.no_grad():
             results = model(batch_tokens.to(device), repr_layers=[30])
         features.append(results["representations"][30])
-    return torch.cat(features, dim=0).cpu().numpy()  # 合并所有特征
+    return torch.cat(features, dim=0).cpu().numpy()
 
 
 def location_coding(pros):
