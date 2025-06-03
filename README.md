@@ -1,6 +1,7 @@
 # EMMPREDMLsub
 
 **EMMPREDMLsub** is a deep learning-based framework for predicting mRNA subcellular localization in a multi-label setting. It integrates ESM2 for powerful sequence representation and adopts the MMDO-MDPU resampling strategy to handle imbalanced datasets, improving prediction robustness and accuracy.
+The online predictor can be found at http://www.emmpredmlsub.com/
 
 ## Repository Structure
 
